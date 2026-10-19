@@ -1,0 +1,9 @@
+[build]
+  base = "."
+  command = "pnpm --filter @workspace/cinematic-portfolio build"
+  publish = "artifacts/cinematic-portfolio/dist/public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

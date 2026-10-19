@@ -1,0 +1,643 @@
+# Build a Premium Cinematic 3D Personal Portfolio Website
+
+Act as an award-winning creative developer, 3D web designer, motion designer, and frontend engineer specializing in Three.js, React, WebGL, GSAP, and immersive digital experiences.
+
+Build a visually extraordinary, professional personal portfolio website with immersive 3D graphics, cinematic scroll-driven camera movement, elegant animations, and a custom interactive Orbital Cursor.
+
+I want a website that feels like an interactive short film combined with a premium technology brand's website. It should be visually memorable, sophisticated, fluid, and professionally designed—not a conventional portfolio template with a few floating objects.
+
+**The most important requirement:** The entire website must feel like ONE connected 3D world. Scrolling should move the camera through a continuous environment in which each scene naturally evolves into the next. Do not create unrelated 3D scenes, disconnected backgrounds, or a collection of objects that simply rotate independently.
+
+If an existing project is present, inspect it first, preserve useful content and working functionality, and avoid replacing the project unnecessarily. Implement the complete working experience rather than stopping at a plan or static mockup.
+
+---
+
+# 1. Overall Creative Direction
+
+Create a premium, cinematic visual identity inspired by sophisticated technology websites, immersive digital experiences, futuristic architecture, and high-end interactive portfolios.
+
+### Visual style
+
+- Dark, elegant background with deep midnight blue, near-black, graphite, and subtle violet tones.
+- Carefully controlled electric-blue, cyan, and soft-violet highlights.
+- Realistic lighting, atmospheric depth, reflections, particles, and subtle bloom.
+- Beautiful typography combining a bold modern sans-serif display font with a clean, highly readable body font.
+- Large editorial headlines, generous negative space, asymmetrical compositions, and carefully arranged content.
+- Smooth transitions between 3D environments, with consistent lighting, colors, geometry, and visual motifs.
+- A balance of futuristic technology and understated elegance.
+
+Avoid excessive neon, visual clutter, random floating cubes, generic gradients, overused glassmorphism cards, and unnecessary decorative elements.
+
+Every visual element should feel intentional and professionally art-directed.
+
+# 2. Core Experience: One Continuous Cinematic 3D Journey
+
+Use Three.js, preferably through React Three Fiber if the existing project uses React, or an appropriate Three.js setup for the existing framework.
+
+Use GSAP with ScrollTrigger or an equivalent reliable animation system to synchronize the 3D camera, object transformations, lighting, and content with scroll progress.
+
+The website should feel like one continuous camera journey through an enormous, interconnected futuristic environment.
+
+## The visual story
+
+The central idea is:
+
+**A spark of curiosity becomes a world of ideas, develops into real projects, expands into achievements, and finally opens into the future.**
+
+Use a recurring visual motif throughout the experience: a small luminous energy orb, glowing particle stream, thin light trail, or elegant geometric object. This motif should guide the user through the entire website and physically connect the scenes.
+
+The camera must not abruptly teleport between unrelated environments. Use continuous spatial transitions, shared geometry, environmental transformations, and coordinated camera movement to make it feel like one evolving world.
+
+## Scene 1 — The Awakening: Hero Section
+
+Open in a vast, dark, atmospheric 3D environment.
+
+Visual elements:
+- A luminous orbital sphere or sophisticated abstract 3D sculpture in the foreground.
+- A subtle field of stars and tiny particles extending into the distance.
+- Elegant circular orbital paths around the central object.
+- Soft light rays, restrained reflections, and atmospheric depth.
+- A distant geometric structure hinting at the environment the camera will enter next.
+- Subtle ambient particle movement.
+
+Display:
+
+**[YOUR NAME]**
+
+*Student. Developer. Creative Thinker.*
+
+Add a concise headline introducing me and my interests, plus a short supporting paragraph describing who I am and what I enjoy building.
+
+Include two functional buttons:
+
+- **Explore My Work**
+- **View Resume**
+
+Use existing personal information wherever available. If information is missing, create clearly labeled, editable placeholders instead of inventing facts.
+
+### Camera behaviour
+
+Begin with a wide establishing shot. As the user scrolls, the camera slowly approaches the central sculpture.
+
+The main object can rotate subtly, while orbital elements move at different speeds to create depth.
+
+As the user continues scrolling, the luminous orb releases a stream of particles. These particles travel forward and become the visual guide for the next scene.
+
+The transition must feel like the camera is following the same energy source into the next part of the world.
+
+# 3. Scene 2 — About Me: Entering the World of Ideas
+
+The camera follows the particle stream into an architectural environment formed from elegant, interconnected geometric structures.
+
+Visual elements:
+- Abstract architectural arches and curved structures.
+- Thin illuminated lines connecting selected points.
+- Floating fragments of typography and small geometric forms.
+- Subtle visual symbols representing curiosity, learning, creativity, and problem-solving.
+- A clean area reserved for readable text.
+
+Display an **About Me** section containing:
+- Personal introduction.
+- Academic background.
+- Interests and areas of curiosity.
+- Approach to learning, problem-solving, and building things.
+
+Preserve any existing bio and academic information. Never invent personal facts.
+
+### Camera transition
+
+As the camera moves forward, architectural lines connect into a larger network of glowing nodes.
+
+The network expands into a more technical structure. The camera travels along one of its illuminated connections, leading directly into the skills scene.
+
+# 4. Scene 3 — Skills: The Network of Knowledge
+
+The architecture gradually transforms into an expansive 3D network.
+
+Visual elements:
+- Connected luminous nodes.
+- Thin flowing lines.
+- Elegant rotating rings and geometric structures.
+- Subtle depth layers.
+- Selective highlights that activate as the camera passes through the network.
+
+Display a **Skills & Interests** section with editable categories such as:
+- Programming.
+- Web development.
+- Computer vision and AI.
+- Tools and technologies.
+- Design and creative problem-solving.
+
+Only display skills supplied by me or clearly marked editable placeholders. Do not invent proficiency levels or use meaningless percentage bars.
+
+### Interactions
+
+When a user hovers over a skill:
+- Highlight its associated node.
+- Illuminate connecting paths.
+- Reveal a concise description or related information.
+- Use smooth transitions rather than sudden changes.
+
+Keep the network elegant, uncluttered, and readable.
+
+### Camera transition
+
+As the camera travels deeper into the network, nodes begin grouping together and their connecting lines converge toward a focal point.
+
+The focal point expands into a large, sophisticated circular portal. The camera passes through the portal, whose geometry unfolds into the project exhibition.
+
+# 5. Scene 4 — Projects: Entering the Things I Build
+
+Create a vast futuristic exhibition space where each project occupies a distinct position along a continuous path.
+
+This should feel like a premium technology exhibition rather than a row of ordinary portfolio cards.
+
+Visual elements:
+- Architectural platforms emerging from the environment.
+- Project frames integrated into the architecture.
+- Subtle holographic-style visualizations.
+- Abstract 3D representations related to each project.
+- Thin illuminated paths linking each project to the next.
+- Carefully controlled lighting and shadows.
+
+Each project presentation should include:
+- Project name.
+- Short description.
+- Technologies used.
+- My role or contribution, if supplied.
+- Screenshot or preview image, if available.
+- Working GitHub repository or live demo link, if supplied.
+
+Reuse my existing project information. If information is missing, create editable placeholders rather than fabricating details or links.
+
+### Project interactions
+
+On hover:
+- The corresponding platform subtly illuminates.
+- Its 3D object reacts to pointer movement.
+- The project information panel appears or gains emphasis.
+- The camera remains stable during ordinary hover interactions.
+
+Clicking a project should open its details, repository, or live demo as appropriate.
+
+Use accessible buttons and links.
+
+### Cinematic scroll behaviour
+
+As the user scrolls:
+1. The camera approaches the first project.
+2. The project becomes prominent while the environment moves subtly.
+3. The camera travels sideways or forward along the illuminated path.
+4. The first project recedes into the environment.
+5. The next project emerges naturally from the same architectural structure.
+
+Repeat this process with restrained variation for the remaining projects.
+
+At the end of the exhibition, the illuminated path rises and curves into the distance. Project structures align into a tall architectural form, and the camera follows the path upward toward a glowing opening.
+
+This leads directly into the achievements scene.
+
+# 6. Scene 5 — Achievements and Academic Journey
+
+The camera emerges into a more open, elevated environment that feels like reaching a milestone.
+
+Visual elements:
+- Tall geometric pillars.
+- Subtle illuminated rings.
+- Refined metallic or glass-like surfaces.
+- Small clusters of light that appear alongside relevant information.
+- A distant horizon suggesting progress and future opportunities.
+
+Display an **Achievements & Academic Journey** section with relevant information such as:
+- Academic milestones.
+- Certifications.
+- Competitions.
+- Awards.
+- Research or technical accomplishments.
+- Relevant extracurricular activities.
+
+Use supplied information or editable placeholders. Do not invent awards, rankings, certificates, or publications.
+
+Present the content using a clean timeline or well-arranged editorial panels.
+
+### Camera transition
+
+As the camera continues upward, the pillars dissolve into fine particles.
+
+The particles gather into a structure above the camera. The camera passes through its opening, and the environment becomes quieter and more open.
+
+This creates a natural transition into the final scene.
+
+# 7. Scene 6 — The Horizon: Goals, Resume, and Contact
+
+The camera enters an expansive, calm environment with a luminous horizon.
+
+Visual elements:
+- A refined circular structure or orbital sculpture.
+- The original luminous orb returning from the opening scene.
+- Subtle particle movement.
+- A distant illuminated pathway extending toward the horizon.
+- More open space and less visual density than earlier scenes.
+
+The return of the original orb should create a satisfying visual loop, making the entire experience feel complete.
+
+Display:
+
+**What's Next?**
+
+Add a short statement about the type of opportunities, internships, collaborations, or projects I am interested in.
+
+Include:
+- A prominent **Download Resume** button.
+- Email contact.
+- LinkedIn.
+- GitHub.
+- Other professional links, if supplied.
+
+The resume button must download an actual resume file if one is provided. Otherwise, create an editable placeholder and clearly explain where the file should be placed.
+
+Do not fabricate contact details or profile URLs.
+
+Finish with a subtle footer containing my name and the current copyright year.
+
+The final scene should feel peaceful, confident, and memorable.
+
+# 8. Mandatory Scene Connectivity
+
+The website must tell one continuous visual story. Do not treat the sections as independent 3D demonstrations.
+
+### Shared visual identity
+
+Maintain a consistent set of:
+- Colors.
+- Materials.
+- Lighting.
+- Particle behaviour.
+- Geometric motifs.
+- Camera perspective.
+- Architectural design language.
+
+### Recurring visual motif
+
+The luminous orb or light trail introduced in Scene 1 must reappear throughout the journey. It should guide the camera, activate structures, travel along connecting paths, or transform into other elements.
+
+Its final appearance should connect back to its original appearance.
+
+### Continuous camera travel
+
+Use one primary camera and a coordinated series of camera keyframes or a carefully designed camera path.
+
+Coordinate:
+- Camera position.
+- Camera rotation and look-at targets.
+- Focal perspective where appropriate.
+- Object transformations.
+- Lighting changes.
+- Environmental geometry.
+- Text animations.
+
+Use forward travel, gentle turns, lateral movement, rising movement, and controlled reveals where appropriate.
+
+### Geometry transformation
+
+Whenever possible, reuse or transform geometry to create transitions:
+
+- Orbital rings become architectural arches.
+- Architectural lines become the skills network.
+- Network connections become a portal.
+- The portal opens into the project exhibition.
+- Project pathways rise into achievement pillars.
+- The pillars dissolve into the final horizon.
+
+### Avoid abrupt transitions
+
+Do not use:
+- Random background changes.
+- Sudden camera teleportation.
+- Unrelated floating objects.
+- Full-screen fades between every section.
+- Identical repeated scroll animations.
+- Objects appearing without a visual transition.
+
+Use controlled overlap so the next environment begins appearing while the previous one is still visible.
+
+# 9. Cinematic Motion and Scroll Physics
+
+Motion style: **cinematic, smooth, elegant, and immersive**.
+
+Use GSAP ScrollTrigger or an equivalent reliable system to coordinate camera movement and scene animation.
+
+Implement:
+- Scroll-driven camera movement.
+- Smooth camera interpolation.
+- Carefully choreographed object movement.
+- Subtle parallax.
+- Scroll-linked lighting changes.
+- Gradual scene reveals.
+- Elegant text entrances.
+- Controlled easing.
+- Ambient motion while the user is not scrolling.
+
+Requirements:
+1. Scrolling should move the camera through the world.
+2. Scrolling backward must reverse the experience smoothly.
+3. Camera movement must remain synchronized with scroll progress.
+4. Avoid sudden jumps, jitter, excessive camera shake, and aggressive zooming.
+5. Preserve normal browser scrolling.
+6. Keep text readable despite moving backgrounds.
+7. Use pinning only where it improves the cinematic experience.
+8. Ensure all content remains reachable.
+9. Prevent duplicate scroll triggers, conflicting animations, and memory leaks.
+10. Refresh scroll measurements correctly after assets load and the viewport changes.
+
+Do not make every element move simultaneously. Prioritize intentional, restrained motion.
+
+# 10. Custom Orbital Cursor — Design and Implementation
+
+Create a distinctive **Orbital Cursor** integrated with the website's visual identity.
+
+The cursor consists of:
+- A central luminous dot that follows the pointer.
+- An orbital shell made from one or more delicate circular or elliptical rings.
+- A smaller satellite dot revolving around the shell's center.
+- A restrained glow and subtle outer halo.
+
+Use icy cyan, electric blue, or soft violet accents. Keep the cursor elegant and small enough not to obstruct content.
+
+## Cursor movement
+
+- The central dot tracks the pointer responsively.
+- The shell follows the pointer and remains centered around the central dot.
+- The satellite revolves continuously around the shell's center at a controlled speed.
+- The rings may rotate at different speeds or in opposite directions.
+- Add subtle directional tilt based on pointer movement.
+- Use smooth interpolation without noticeable lag or drift.
+
+The cursor should feel like a small celestial object following the user.
+
+## Cursor states
+
+**Default:** A glowing central dot, orbital shell, and moving satellite.
+
+**Hovering over links or buttons:**
+- Expand the shell slightly.
+- Increase the core's brightness.
+- Subtly accelerate the satellite.
+- Optionally reveal a short label such as "OPEN", "VIEW", or "EXPLORE".
+
+**Hovering over projects:**
+- Expand the cursor into a more visible orbital form.
+- Display a short "VIEW PROJECT" label.
+- Subtly illuminate the relevant project object or platform.
+
+**Clicking:**
+- Trigger a restrained ripple or ring expansion.
+- Return smoothly to the default state.
+
+**Scrolling:**
+- Allow subtle orbital reactions without making the cursor distracting.
+
+## CRITICAL BUG-PREVENTION REQUIREMENT: ORBITAL SHELL MUST NOT DRIFT
+
+The orbital shell must remain centered around the central dot at all times. It must never continuously fly toward the top-left corner, slide away from the pointer, or accumulate positional offsets.
+
+Keep the cursor's pointer position, the shell's rotation, and the satellite's orbit as separate transformations.
+
+### Required implementation approach
+
+1. Use a single parent cursor container to track the pointer.
+2. Position the parent using a consistent viewport coordinate system, preferably `position: fixed` with `clientX` and `clientY`.
+3. Apply pointer translation only to the parent container.
+4. Center the central dot and shell relative to that parent, using an appropriate layout and/or `translate(-50%, -50%)`.
+5. Give the shell its own nested element for rotation. Never overwrite the parent's pointer-following transform with the shell's rotation animation.
+6. Give the satellite its own nested element or orbit container so its movement is calculated relative to the shell's center.
+7. Set the shell's `transform-origin` to its own center.
+8. Check that no CSS animation, GSAP tween, or JavaScript update writes conflicting transforms to the same element.
+9. Do not mix viewport coordinates (`clientX`, `clientY`) with page coordinates (`pageX`, `pageY`) or apply unnecessary scroll offsets.
+10. Use a consistent DOM positioning hierarchy. Avoid positioning the shell relative to an unrelated ancestor.
+11. Ensure there is only one active pointer-tracking animation loop.
+12. Clean up event listeners, animation frames, and animation instances when the component unmounts.
+13. Keep `pointer-events: none` on the decorative cursor layers.
+14. Do not use a hard-coded top-left offset, hide the shell, or remove the orbital animation as a workaround.
+
+If the existing cursor uses CSS transforms, inspect whether the pointer-position transform and rotation transform are overwriting each other. If it uses GSAP, check whether GSAP and CSS animations are controlling the same transform property.
+
+Adapt the fix to the actual implementation instead of blindly duplicating the cursor component.
+
+### Cursor testing requirements
+
+After implementation, verify all of the following:
+- The shell remains centered around the central dot while the pointer moves.
+- The satellite follows a stable circular path around the center.
+- Moving the pointer in all four directions does not cause drift.
+- Moving the pointer in circles does not cause the shell to detach.
+- Scrolling does not displace the cursor.
+- Hover and click effects continue to work.
+- The cursor does not block clicks, links, buttons, or text selection.
+- No duplicate animation loops or console errors are introduced.
+
+**Do not consider the cursor complete until the shell remains correctly positioned while the pointer moves and the satellite continues revolving.**
+
+## Mobile and accessibility
+
+- Disable the custom cursor on touch devices.
+- Preserve native touch interactions.
+- Respect reduced-motion preferences.
+- Ensure the cursor cannot block interactive elements.
+- Provide a sensible fallback if cursor initialization fails.
+
+# 11. Typography and Content Design
+
+Treat typography as part of the art direction.
+
+Use:
+- Large, confident headlines.
+- Carefully controlled line lengths.
+- Generous spacing.
+- Clear section labels.
+- Subtle editorial details.
+- Smooth entrance animations.
+- Strong contrast and excellent readability.
+
+Ensure all required portfolio content is included:
+
+1. Hero and personal introduction.
+2. Bio.
+3. Academics.
+4. Skills and interests.
+5. Projects.
+6. Achievements.
+7. Research, if applicable.
+8. Downloadable CV or resume.
+9. Type of work or opportunities sought.
+10. Contact details.
+
+Use existing information or clearly labeled placeholders. Do not fabricate personal details.
+
+# 12. Navigation and Interface
+
+Add a minimal, elegant navigation system.
+
+Include:
+- My name or a small logo.
+- Links to About, Skills, Projects, Achievements, and Contact.
+- A subtle current-section indicator.
+- A small scroll-progress indicator.
+- A mobile navigation menu.
+- An unobtrusive "SCROLL TO EXPLORE" instruction in the opening scene.
+
+Navigation must work reliably. Clicking a section should smoothly move to the corresponding content or scene.
+
+Provide a skip-to-content link and maintain keyboard accessibility.
+
+# 13. Technical Architecture
+
+Inspect the existing project before deciding the implementation.
+
+For an existing React application, prefer:
+- React.
+- Three.js.
+- React Three Fiber.
+- Drei where useful.
+- GSAP and ScrollTrigger.
+- CSS for typography, layout, and interface elements.
+
+For a suitable project using another framework, retain that framework where practical.
+
+Separate concerns into sensible modules, such as:
+- Main application and navigation.
+- 3D canvas and scene management.
+- Camera path and scroll progress.
+- Individual scene components.
+- Orbital cursor.
+- Portfolio content.
+- Responsive styles.
+
+Use a single coordinated camera journey rather than six unrelated canvases.
+
+### Implementation quality
+
+- Keep code maintainable.
+- Reuse materials and geometries where possible.
+- Avoid unnecessary dependencies.
+- Prevent duplicate animation loops.
+- Dispose of WebGL resources when no longer needed.
+- Use stable React keys.
+- Avoid unnecessary React re-renders during pointer movement.
+- Keep cursor pointer tracking efficient.
+- Ensure scroll animations initialize and clean up correctly.
+- Avoid missing assets and console errors.
+- Do not leave major features as nonfunctional placeholders.
+
+# 14. Performance and Loading
+
+Implement:
+- Lazy loading for nonessential assets.
+- Optimized geometry.
+- Compressed textures where practical.
+- Reusable materials and meshes.
+- Reasonable pixel ratios.
+- Controlled particle counts.
+- Efficient lighting and shadows.
+- Reduced rendering cost on mobile.
+- A graceful loading screen.
+- A fallback if WebGL is unavailable.
+
+Use bloom and other post-processing effects only if they improve visual quality without significantly harming performance.
+
+The first screen should become useful quickly. Do not force users to wait for every scene to load before reading the introduction.
+
+# 15. Responsive Design
+
+### Desktop
+Provide the full cinematic camera journey, detailed environments, custom Orbital Cursor, and sophisticated transitions.
+
+### Tablet
+Simplify geometry and particle density while preserving the visual story.
+
+### Mobile
+- Disable the desktop Orbital Cursor.
+- Reduce scene complexity and rendering cost.
+- Adjust camera positions and object scale.
+- Simplify transitions where necessary.
+- Keep text and buttons readable.
+- Preserve access to every section.
+- Ensure navigation and buttons work with touch.
+
+The mobile version must still feel like the same website.
+
+# 16. Accessibility and Reduced Motion
+
+- Use semantic HTML.
+- Maintain sufficient contrast.
+- Provide visible keyboard focus states.
+- Use accessible button and link labels.
+- Keep meaningful content in normal HTML.
+- Ensure content remains accessible if WebGL fails.
+- Respect `prefers-reduced-motion`.
+- Offer a simplified experience with minimal movement when reduced motion is requested.
+- Never rely on 3D graphics alone to communicate essential information.
+
+# 17. Netlify Deployment Compatibility — Mandatory
+
+The finished project must be deployable to Netlify.
+
+Inspect the actual framework and build tool before configuring deployment.
+
+For a typical Vite-based React application:
+- Ensure the correct build script exists.
+- Use `npm run build` when appropriate.
+- Use `dist` as the publish directory.
+- Add suitable Netlify configuration when necessary.
+- Configure SPA redirects only if required.
+- Ensure fonts, images, and other assets resolve correctly in production.
+- Avoid hard-coded Replit-specific URLs.
+- Ensure the site works on a normal public domain.
+- Do not expose private API keys or secrets.
+- Ensure resume and project asset paths work after deployment.
+
+For a different framework, determine its actual production build command and output directory instead of blindly applying Vite settings.
+
+Document any required environment variables without exposing secret values.
+
+# 18. Final Quality Checks
+
+Before declaring the task complete:
+
+1. Run the available production build command.
+2. Fix build errors and import errors.
+3. Check that every portfolio section is present.
+4. Confirm that scroll progress controls the main camera journey.
+5. Confirm that all scenes are visually connected.
+6. Confirm that scrolling backward works smoothly.
+7. Confirm that the Orbital Cursor's shell stays centered around the main dot.
+8. Confirm that the satellite revolves around the correct center without drift.
+9. Test pointer movement, scrolling, hovering, and clicking.
+10. Confirm that cursor animations do not overwrite each other's transforms.
+11. Verify that navigation and CTA buttons work.
+12. Verify the resume button points to a real file or a clearly marked placeholder.
+13. Check responsive layouts and reduced-motion behaviour.
+14. Verify that the production build is compatible with Netlify.
+15. Report the files changed, tests performed, and any remaining manual steps honestly.
+
+Do not claim that a feature works unless it has actually been implemented and checked.
+
+# 19. Final Creative Standard
+
+The finished website should feel like an interactive cinematic experience where users explore my world through a continuous journey.
+
+The opening orb, architectural environment, knowledge network, project exhibition, achievement structures, and final horizon must feel like different stages of the same evolving world.
+
+The camera is the storyteller.
+
+Scrolling is the film's progression.
+
+The recurring luminous motif connects every scene.
+
+The Orbital Cursor is the user's personal instrument for exploring that world—and its shell must remain perfectly centered around the main dot without drifting.
+
+The portfolio content remains the focus, while the 3D experience makes it memorable.
+
+**Prioritize visual coherence, beautiful transitions, smooth camera choreography, a correctly functioning Orbital Cursor, and professional execution over the number of effects.**
+
+Start by inspecting the project, then implement the complete working website. Test the production build and the cursor behaviour. Finish by explaining how I can deploy the project to Netlify.
