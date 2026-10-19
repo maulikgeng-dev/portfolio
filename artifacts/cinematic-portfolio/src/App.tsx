@@ -136,6 +136,7 @@ function App() {
     { label: "Email", value: portfolio.contact.email },
     { label: "LinkedIn", value: portfolio.contact.linkedin },
     { label: "GitHub", value: portfolio.contact.github },
+    { label: "Instagram", value: portfolio.contact.instagram },
   ];
 
   return (
@@ -296,8 +297,8 @@ function App() {
                 </h2>
               </div>
               <p>
-                Every path starts with a question. This is where the curiosity,
-                context, and way of working behind the work belong.
+                Every path starts with a question. This is where curiosity
+                becomes exploration, and exploration begins to take shape.
               </p>
             </div>
             <div className="about-layout">
@@ -307,9 +308,6 @@ function App() {
                   {portfolio.about.statement.split("/")[0]}{" "}
                   <em>{portfolio.about.statement.split("/")[1]}</em>
                 </p>
-                <span className="placeholder-note">
-                  Editable profile placeholder
-                </span>
               </div>
               <div className="editorial-list reveal reveal-delay-1">
                 <div className="editorial-row">
@@ -344,14 +342,14 @@ function App() {
               <div>
                 <div className="eyebrow">02 / Skills &amp; interests</div>
                 <h2 id="skills-title">
-                  Things worth
+                  Driven by
                   <br />
-                  <em>learning.</em>
+                  <em>curiosity.</em>
                 </h2>
               </div>
               <p>
-                A living network of subjects, tools, and questions. Add the
-                technologies and interests that truly feel like yours.
+                A growing toolkit shaped by hands-on practice, new questions,
+                and ideas worth exploring.
               </p>
             </div>
             <div className="skills-grid">
@@ -368,9 +366,6 @@ function App() {
                   <span className="skill-detail">{skill.detail}</span>
                 </div>
               ))}
-            </div>
-            <div className="skills-foot">
-              No rankings or proficiency scores — just room for the real story.
             </div>
           </div>
         </section>
@@ -392,9 +387,8 @@ function App() {
                 </h2>
               </div>
               <p>
-                Selected work will live along this path. Replace each marker
-                with a real project, its story, tools, contribution, and working
-                destination.
+                Each project begins with a question. Follow the idea, the tools
+                behind it, and the work still to be done.
               </p>
             </div>
             <div className="project-list">
@@ -406,12 +400,9 @@ function App() {
                   data-project-index={index}
                   data-testid={`row-project-${index + 1}`}
                 >
-                  <span className="project-number">0{index + 1} / FIELD</span>
+                  <span className="project-number">0{index + 1}</span>
                   <div>
                     <span className="project-title">{project.title}</span>
-                    <span className="project-placeholder">
-                      Project details to be added
-                    </span>
                   </div>
                   <div className="project-description">
                     {project.preview && (
@@ -455,10 +446,6 @@ function App() {
                 </article>
               ))}
             </div>
-            <p className="projects-caption">
-              Repository and live-demo links are intentionally omitted until
-              supplied.
-            </p>
           </div>
         </section>
 
@@ -481,8 +468,8 @@ function App() {
                 </h2>
               </div>
               <p>
-                Milestones make a map, not a measure. Add real academic steps,
-                research, awards, and experiences here.
+                Every milestone marks a step forward. The goal is progress
+                through learning, experimentation, and meaningful work.
               </p>
             </div>
             <div className="timeline">

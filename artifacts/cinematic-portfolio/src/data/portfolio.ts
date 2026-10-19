@@ -6,7 +6,7 @@
  */
 export const portfolio = {
   name: "Maulik Gupta",
-  role: "Engineering Student | Aspiring Developer",
+  role: "Engineering Student | Aspiring Entrepreneur",
 
   intro:
     "Curious by nature, builder by choice. I explore technology, creativity, and problem-solving, turning ideas into projects while constantly learning what's possible.",
@@ -14,7 +14,7 @@ export const portfolio = {
   about: {
     statement: "Curiosity into creation. / Building what comes next.",
     introduction:
-      "I'm a first-year B.Tech student at VIT Vellore who enjoys exploring technology, solving problems, and turning ideas into projects. I'm interested in learning how software and emerging technologies can address real-world challenges.",
+      "I'm a first-year B.Tech CSE student at VIT Vellore, exploring how technology can solve problems and turn ideas into useful projects.",
     academic: "B.Tech · First Year · VIT Vellore · CSE Core",
     interests:
       "Artificial intelligence, machine learning, computer vision, app development, AR/VR, innovative technology, entrepreneurship, and solving real-world problems.",
@@ -40,7 +40,7 @@ export const portfolio = {
       contribution: "Project development",
       repository: "",
       demo: "",
-      preview: "",
+      preview: "/Screenshot 2026-10-19 194750.png",
     },
     {
       title: "Quol — AR Glasses Concept",
@@ -50,30 +50,50 @@ export const portfolio = {
       contribution: "Product concept and exploration",
       repository: "",
       demo: "",
-      preview: "",
+      preview: "/quol.png",
     },
     {
       title: "NASA Data-Based Wildfire Project",
       description:
-        "A project exploring NASA data for wildfire monitoring and analysis through a software-based prototype.",
-      technologies: "Python · NASA Data · Streamlit",
+        "A college project exploring NASA data for wildfire monitoring and analysis, with a Python and Streamlit prototype in      development.",
+      technologies: "Python · NASA Data · Streamlit · XGBoost",
       contribution: "Project development",
       repository: "",
       demo: "",
-      preview: "",
+      preview: "/Screenshot 2026-10-19 195124.png",
     },
   ],
 
   milestones: [
     {
+      date: "2024",
+      title: "Class 10 Board Examinations",
+      description: "AISSE · CBSE",
+    },
+    {
+      date: "March, 2026",
+      title: "Class 12 Board Examinations",
+      description: "CBSE · Senior Secondary",
+    },
+    {
+      date: "April-June, 2026",
+      title: "JEE Main & Advanced",
+      description: "Engineering Entrance Examination",
+    },
+    {
+      date: "June, 2026",
+      title: "VITEEE",
+      description: "VIT Engineering Entrance Examination",
+    },
+    {
       date: "Present",
-      title: "B.Tech · First Year",
+      title: "B.Tech · CSE Core",
       description:
-        "Studying CSE Core at VIT Vellore while building programming foundations and exploring technology projects.",
+        "Studying at VIT Vellore while exploring programming, AI, and emerging technologies.",
     },
   ],
 
-  next: "Looking to collaborate on innovative technology projects, gain practical experience, and turn ambitious ideas into working products.",
+  next: "I'm looking to collaborate on technology projects, gain practical experience, and turn ambitious ideas into useful products. Always open to learning, building, and exploring what's possible.",
 
   resumePath: "/resume.pdf",
 
@@ -81,5 +101,6 @@ export const portfolio = {
     email: "maulikgeng@gamil.com",
     linkedin: "https://www.linkedin.com/in/maulik-gupta-b0a986420/",
     github: "https://github.com/maulikgeng-dev",
+    instagram: "https://www.instagram.com/noirmauli.rare",
   },
 };
