@@ -51,21 +51,23 @@ function buildEnvironment(scene: THREE.Scene, path: THREE.CatmullRomCurve3, mobi
     color: '#687e91', emissive: '#3e6d83', emissiveIntensity: 0.35, metalness: 0.8, roughness: 0.28,
   });
   const orbMaterial = new THREE.MeshPhysicalMaterial({
-    color: '#bceff7', emissive: '#55b8cf', emissiveIntensity: 1.6,
-    metalness: 0.05, roughness: 0.12, transmission: 0.12, clearcoat: 1, clearcoatRoughness: 0.12,
+    color: '#24164D', emissive: '#49358A', emissiveIntensity: 0.22,
+    metalness: 0.22, roughness: 0.32, clearcoat: 0.92, clearcoatRoughness: 0.18,
   });
   const shellMaterial = new THREE.MeshBasicMaterial({
-    color: '#b4eaf4', wireframe: true, transparent: true, opacity: 0.28,
+    color: '#7186ff', wireframe: true, transparent: true, opacity: 0.3,
+  });
+  const orbRingMaterial = new THREE.MeshBasicMaterial({
+    color: '#6382ff', transparent: true, opacity: 0.45,
+  });
+  const orbAccentMaterial = new THREE.MeshBasicMaterial({
+    color: '#7757d9', transparent: true, opacity: 0.3,
   });
   const pointMaterial = new THREE.PointsMaterial({
     color: '#b9eaf2', size: mobile ? 0.055 : 0.06, transparent: true, opacity: 0.63,
     depthWrite: false, sizeAttenuation: true,
   });
-  [trackMaterial, archMaterial, violetMaterial, floorMaterial, networkMaterial, nodeMaterial, platformMaterial, pillarMaterial, orbMaterial, shellMaterial, pointMaterial].forEach((material) => resources.materials.add(material));
-
-  const track = new THREE.Mesh(new THREE.TubeGeometry(path, 340, 0.022, 5, false), trackMaterial);
-  scene.add(track);
-  resources.geometries.add(track.geometry);
+  [trackMaterial, archMaterial, violetMaterial, floorMaterial, networkMaterial, nodeMaterial, platformMaterial, pillarMaterial, orbMaterial, shellMaterial, orbRingMaterial, orbAccentMaterial, pointMaterial].forEach((material) => resources.materials.add(material));
 
   const ringCount = mobile ? 9 : 13;
   const ringObjects: THREE.Group[] = [];
@@ -183,15 +185,15 @@ function buildEnvironment(scene: THREE.Scene, path: THREE.CatmullRomCurve3, mobi
   const orb = new THREE.Group();
   const core = new THREE.Mesh(new THREE.SphereGeometry(0.56, 28, 22), orbMaterial);
   const shell = new THREE.Mesh(new THREE.IcosahedronGeometry(0.9, 1), shellMaterial);
-  const orbitA = new THREE.Mesh(new THREE.TorusGeometry(1.15, 0.013, 6, 80), trackMaterial);
-  const orbitB = new THREE.Mesh(new THREE.TorusGeometry(1.43, 0.009, 6, 80), violetMaterial);
+  const orbitA = new THREE.Mesh(new THREE.TorusGeometry(1.15, 0.013, 6, 80), orbRingMaterial);
+  const orbitB = new THREE.Mesh(new THREE.TorusGeometry(1.43, 0.009, 6, 80), orbAccentMaterial);
   orbitA.rotation.set(0.85, 0.28, 0.1);
   orbitB.rotation.set(1.2, -0.55, -0.35);
   const satellite = new THREE.Mesh(new THREE.SphereGeometry(0.075, 10, 8), nodeMaterial);
   satellite.position.set(1.15, 0, 0);
   orbitA.add(satellite);
   orb.add(core, shell, orbitA, orbitB);
-  const orbLight = new THREE.PointLight('#8ee6f5', 20, 15, 2);
+  const orbLight = new THREE.PointLight('#e0d6ff', 1.1, 6, 2);
   orb.add(orbLight);
   scene.add(orb);
   [core.geometry, shell.geometry, orbitA.geometry, orbitB.geometry, satellite.geometry].forEach((geometry) => resources.geometries.add(geometry));
@@ -227,11 +229,11 @@ export function CinematicWorld() {
     const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 220);
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2('#080d17', 0.012);
-    scene.add(new THREE.HemisphereLight('#b9d4e8', '#11131e', 1.25));
-    const keyLight = new THREE.DirectionalLight('#b7eaf4', 2.1);
+    scene.add(new THREE.HemisphereLight('#b9d4e8', '#11131e', 1.05));
+    const keyLight = new THREE.DirectionalLight('#b7eaf4', 1.55);
     keyLight.position.set(-4, 9, 8);
     scene.add(keyLight);
-    const fillLight = new THREE.PointLight('#9479be', 55, 55, 2);
+    const fillLight = new THREE.PointLight('#7767c4', 22, 48, 2);
     fillLight.position.set(5, 5, -55);
     scene.add(fillLight);
 
@@ -262,6 +264,8 @@ export function CinematicWorld() {
     const desiredCamera = new THREE.Vector3();
     const desiredLook = new THREE.Vector3();
     const desiredOrb = new THREE.Vector3();
+    const orbTangent = new THREE.Vector3();
+    const orbRight = new THREE.Vector3();
     let environment: ReturnType<typeof buildEnvironment> | null = null;
     const cleanupClasses = () => {
       document.documentElement.classList.remove('webgl-ready', 'world-fallback');
@@ -329,7 +333,7 @@ export function CinematicWorld() {
       renderer.setClearColor(0x000000, 0);
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.05;
+      renderer.toneMappingExposure = 0.94;
       renderer.domElement.setAttribute('aria-hidden', 'true');
       renderer.domElement.className = 'cinematic-webgl-canvas';
       host.appendChild(renderer.domElement);
@@ -350,7 +354,12 @@ export function CinematicWorld() {
         desiredCamera.copy(path.getPointAt(cameraT));
         desiredLook.copy(path.getPointAt(lookT));
         desiredLook.y += 0.18;
-        desiredOrb.copy(path.getPointAt(Math.min(0.995, cameraT + 0.043)));
+        const orbT = Math.min(0.995, cameraT + 0.043);
+        desiredOrb.copy(path.getPointAt(orbT));
+        path.getTangentAt(orbT, orbTangent).normalize();
+        orbRight.crossVectors(orbTangent, camera.up).normalize();
+        const heroSeparation = 1 - THREE.MathUtils.smoothstep(currentProgress, 0.2, 0.3);
+        desiredOrb.addScaledVector(orbRight, 3.8 * heroSeparation);
 
         if (reducedMotion) {
           camera.position.copy(desiredCamera);

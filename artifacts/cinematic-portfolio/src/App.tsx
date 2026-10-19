@@ -19,7 +19,6 @@ function App() {
   const [active, setActive] = useState('about');
   const [menuOpen, setMenuOpen] = useState(false);
   const [resumeMessage, setResumeMessage] = useState('');
-  const activeSectionNumber = Math.max(1, sections.findIndex((section) => section.id === active) + 1);
 
   useEffect(() => {
     document.title = `${portfolio.name} — Student · Developer · Creative thinker`;
@@ -145,14 +144,12 @@ function App() {
           <a key={section.id} href={`#${section.id}`} onClick={closeMenu} data-testid={`link-mobile-${section.id}`}>{section.label}</a>
         ))}
       </nav>
-      <div className="side-index" aria-hidden="true"><span>JOURNEY</span><b>{String(activeSectionNumber).padStart(2, '0')}</b><span>05</span></div>
-
       <main id="main-content">
-        <section className="scene hero" id="home" data-scene aria-labelledby="hero-title">
+        <section className="scene hero border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px]" id="home" data-scene aria-labelledby="hero-title">
           <div className="scene-inner">
             <div className="hero-copy">
               <div className="eyebrow reveal">Independent mind · open horizon</div>
-              <h1 id="hero-title" className="reveal reveal-delay-1" data-testid="text-hero-title">{portfolio.name}<br /><em>in progress.</em></h1>
+              <h1 id="hero-title" className="border-t-[color:var(--night)] border-r-[color:var(--night)] border-b-[color:var(--night)] border-l-[color:var(--night)]" data-testid="text-hero-title">Maulik Gupta<br /><em>building what's next...</em></h1>
               <p className="hero-role reveal reveal-delay-2">{portfolio.role}</p>
               <p className="hero-description reveal reveal-delay-2">{portfolio.intro}</p>
               <div className="hero-actions reveal reveal-delay-2">

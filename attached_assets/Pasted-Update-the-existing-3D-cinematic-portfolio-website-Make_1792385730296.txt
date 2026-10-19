@@ -1,0 +1,47 @@
+Update the existing 3D cinematic portfolio website. Make only the changes described below and preserve all existing content, animations, scroll behavior, layout, and Netlify compatibility.
+
+### 1. Completely remove the unwanted trail behind the orb
+
+The main animated orb currently emits a thin, bright cyan/teal beam or trail that extends outward from its surface. It looks disconnected from the animation and visually clashes with the orbital rings.
+
+- Identify the exact Three.js object, geometry, material, shader, particle effect, or animation responsible for this beam/trail.
+- Remove that specific trail effect completely.
+- Do not simply make it transparent if doing so leaves unnecessary geometry or animation running.
+- Preserve the main orb, its internal glow, orbital rings, wireframe shell, satellites, small light particles, and existing motion.
+- Do not remove the thin orbital rings or the decorative lines belonging to other scenes.
+- Check every scroll scene where this orb appears, since the same effect may be reused.
+- Ensure no residual line, streak, or beam remains after the animation updates or the camera moves.
+
+### 2. Change the orb to a refined Midnight Violet palette
+
+Use these colors as the starting point:
+
+- Main orb body: #24164D
+- Midtone reflections: #49358A
+- Violet highlights: #7757D9
+- Soft luminous accents: #B7A2FF
+- Central light source: near-white with a subtle lavender tint.
+
+The orb should feel like a premium, dark glass or polished energy sphere—not a flat, opaque blue ball.
+
+Use tasteful gradients, controlled reflections, subtle internal lighting, and restrained bloom if the existing rendering system supports them. Keep the center luminous but avoid overexposure.
+
+### 3. Preserve the existing visual hierarchy
+
+- Retain the dark midnight/graphite background.
+- Keep the existing pale cyan typography readable.
+- Keep the wireframe and orbital rings, using restrained violet and muted cyan accents.
+- Avoid making the entire scene purple; the violet should primarily define the orb.
+- Reduce excessive bloom or saturation if necessary.
+- Maintain strong contrast between the orb, its surroundings, and the text.
+
+### 4. Implementation and testing
+
+- Modify the existing orb component and materials rather than creating a second orb.
+- Do not add a new animation or replace the existing orbital animation.
+- Avoid unnecessary dependencies or broad refactoring.
+- Test the orb in every scene where it is reused and throughout scroll transitions.
+- Verify that removing the trail does not break the orbital motion, lighting, or rendering.
+- Keep the project buildable and deployable on Netlify.
+
+First inspect the existing implementation to identify the trail's actual source. Then make the smallest targeted changes and summarize which files were modified.

@@ -16,9 +16,18 @@ export function OrbitalCursor() {
     let frame = 0;
     let clickTimeout = 0;
     let hovering = false;
+    let cursorReady = false;
     const move = (event: PointerEvent) => {
+      if (event.pointerType !== 'mouse') return;
       targetX = event.clientX;
       targetY = event.clientY;
+      if (!cursorReady) {
+        x = targetX;
+        y = targetY;
+        parent.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        document.documentElement.classList.add('orbital-cursor-ready');
+        cursorReady = true;
+      }
     };
     const updateHover = (event: PointerEvent) => {
       const target = event.target as HTMLElement | null;
@@ -51,6 +60,7 @@ export function OrbitalCursor() {
       window.removeEventListener('pointerover', updateHover);
       window.removeEventListener('pointerout', updateHover);
       window.removeEventListener('pointerdown', click);
+      document.documentElement.classList.remove('orbital-cursor-ready');
     };
   }, []);
 
