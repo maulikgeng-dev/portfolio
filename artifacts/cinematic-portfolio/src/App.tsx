@@ -149,7 +149,7 @@ function App() {
           <div className="scene-inner">
             <div className="hero-copy">
               <div className="eyebrow reveal">Independent mind · open horizon</div>
-              <h1 id="hero-title" className="border-t-[color:var(--night)] border-r-[color:var(--night)] border-b-[color:var(--night)] border-l-[color:var(--night)]" data-testid="text-hero-title">Maulik Gupta<br /><em>building what's next...</em></h1>
+              <h1 id="hero-title" className="border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px]" data-testid="text-hero-title">Maulik Gupta<br /><em>building what's next...</em></h1>
               <p className="hero-role reveal reveal-delay-2">{portfolio.role}</p>
               <p className="hero-description reveal reveal-delay-2">{portfolio.intro}</p>
               <div className="hero-actions reveal reveal-delay-2">
