@@ -145,13 +145,13 @@ function App() {
         ))}
       </nav>
       <main id="main-content">
-        <section className="scene hero border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px]" id="home" data-scene aria-labelledby="hero-title">
+        <section className="scene hero" id="home" data-scene aria-labelledby="hero-title">
           <div className="scene-inner">
             <div className="hero-copy">
               <div className="eyebrow reveal">Independent mind · open horizon</div>
-              <h1 id="hero-title" className="border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px]" data-testid="text-hero-title">Maulik Gupta<br /><em>building what's next...</em></h1>
+              <h1 id="hero-title" className="text-[120px]" data-testid="text-hero-title">Maulik Gupta<br /><em>building what's next...</em></h1>
               <p className="hero-role reveal reveal-delay-2">{portfolio.role}</p>
-              <p className="hero-description reveal reveal-delay-2">{portfolio.intro}</p>
+              <p className="hero-description reveal reveal-delay-2">Curious by nature, builder by choice. I explore the intersection of technology, creativity, and problem-solving—turning ideas into projects while constantly learning what's possible.</p>
               <div className="hero-actions reveal reveal-delay-2">
                 <a className="button-primary" href="#projects" data-testid="link-explore-projects">Explore my work <ArrowDownRight className="arrow" size={16} /></a>
                 <button className="button-quiet" type="button" onClick={handleResume} data-testid="button-view-resume">View resume <ArrowUpRight className="arrow" size={15} /></button>
