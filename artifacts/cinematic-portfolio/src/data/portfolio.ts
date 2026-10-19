@@ -1,68 +1,85 @@
 /**
  * Edit this file to personalize the portfolio.
- * Bracketed copy is intentionally a placeholder, not biographical information.
  *
  * Resume: put the real file at public/resume.pdf and set resumePath to
- * "/resume.pdf". The download control stays informational until that file exists.
+ * "/resume.pdf" when it is ready.
  */
 export const portfolio = {
-  name: '[YOUR NAME]',
-  role: 'Student · Developer · Creative thinker',
-  intro: '[Add a concise introduction to who you are and what you enjoy building.]',
+  name: "Maulik Gupta",
+  role: "Engineering Student | Aspiring Developer",
+
+  intro:
+    "Curious by nature, builder by choice. I explore technology, creativity, and problem-solving, turning ideas into projects while constantly learning what's possible.",
+
   about: {
-    statement: '[Add a personal statement.] / [Add a second line.]',
-    introduction: '[Write a personal introduction in your own voice.]',
-    academic: '[Add your school, course of study, and academic background.]',
-    interests: '[Add the subjects and questions you are curious about.]',
-    approach: '[Describe how you learn, solve problems, and make things.]',
+    statement: "Curiosity into creation. / Building what comes next.",
+    introduction:
+      "I'm a first-year B.Tech student at VIT Vellore who enjoys exploring technology, solving problems, and turning ideas into projects. I'm interested in learning how software and emerging technologies can address real-world challenges.",
+    academic: "B.Tech · First Year · VIT Vellore · CSE Core",
+    interests:
+      "Artificial intelligence, machine learning, computer vision, app development, AR/VR, innovative technology, entrepreneurship, and solving real-world problems.",
+    approach:
+      "I learn by experimenting, building small prototypes, solving problems, and improving through iteration.",
   },
+
   skills: [
-    { name: 'Programming', detail: '[Add languages]' },
-    { name: 'Web development', detail: '[Add frameworks & tools]' },
-    { name: 'AI & computer vision', detail: '[Add areas of interest]' },
-    { name: 'Tools & technologies', detail: '[Add tools]' },
-    { name: 'Design thinking', detail: '[Add creative strengths]' },
-    { name: 'Research', detail: '[Add methods or topics]' },
+    { name: "Programming", detail: "Python" },
+    { name: "Web Development", detail: "HTML · CSS · JavaScript" },
+    { name: "Computer Vision", detail: "OpenCV" },
+    { name: "Machine Learning", detail: "PyTorch · Exploring ML concepts" },
+    { name: "Data Analysis", detail: "Pandas" },
+    { name: "Emerging Technology", detail: "AI · AR/VR · Product ideas" },
   ],
+
   projects: [
     {
-      title: '[Project one]',
-      description: '[Add a brief, specific project description.]',
-      technologies: '[Add technologies used.]',
-      contribution: '[Add your role or contribution.]',
-      repository: '',
-      demo: '',
-      preview: '',
+      title: "Face Attendance System",
+      description:
+        "A project focused on exploring facial recognition and computer vision for an attendance system.",
+      technologies: "Python · OpenCV",
+      contribution: "Project development",
+      repository: "",
+      demo: "",
+      preview: "",
     },
     {
-      title: '[Project two]',
-      description: '[Add a brief, specific project description.]',
-      technologies: '[Add technologies used.]',
-      contribution: '[Add your role or contribution.]',
-      repository: '',
-      demo: '',
-      preview: '',
+      title: "Quol — AR Glasses Concept",
+      description:
+        "An augmented-reality glasses concept exploring hands-free access to digital information, real-world navigation, visual search, and immersive viewing.",
+      technologies: "AR/VR · Computer Vision · Spatial Computing",
+      contribution: "Product concept and exploration",
+      repository: "",
+      demo: "",
+      preview: "",
     },
     {
-      title: '[Project three]',
-      description: '[Add a brief, specific project description.]',
-      technologies: '[Add technologies used.]',
-      contribution: '[Add your role or contribution.]',
-      repository: '',
-      demo: '',
-      preview: '',
+      title: "NASA Data-Based Wildfire Project",
+      description:
+        "A project exploring NASA data for wildfire monitoring and analysis through a software-based prototype.",
+      technologies: "Python · NASA Data · Streamlit",
+      contribution: "Project development",
+      repository: "",
+      demo: "",
+      preview: "",
     },
   ],
+
   milestones: [
-    { date: '[YEAR / PERIOD]', title: '[Academic milestone]', description: '[Add a course, certification, competition, award, or extracurricular activity.]' },
-    { date: '[YEAR / PERIOD]', title: '[Research or technical work]', description: '[Add a meaningful research or technical accomplishment, if applicable.]' },
-    { date: '[YEAR / PERIOD]', title: '[Next chapter]', description: '[Add another milestone or remove this entry.]' },
+    {
+      date: "Present",
+      title: "B.Tech · First Year",
+      description:
+        "Studying CSE Core at VIT Vellore while building programming foundations and exploring technology projects.",
+    },
   ],
-  next: '[Describe the internships, collaborations, projects, or opportunities you are looking for.]',
-  resumePath: '',
+
+  next: "Looking to collaborate on innovative technology projects, gain practical experience, and turn ambitious ideas into working products.",
+
+  resumePath: "/resume.pdf",
+
   contact: {
-    email: '',
-    linkedin: '',
-    github: '',
+    email: "maulikgeng@gamil.com",
+    linkedin: "https://www.linkedin.com/in/maulik-gupta-b0a986420/",
+    github: "https://github.com/maulikgeng-dev",
   },
 };
